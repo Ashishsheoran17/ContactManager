@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" />
+    <title>Contact Manager</title>
+</head>
+
+<body>
+    <main>
+        <div class="container row">
+            <section class="ListContainer column">
+                <h2>Contact List</h2>
+                <div id="people" class="Contact_list"></div>
+            </section>
+
+            <form autocomplete="off" class="js-form column">
+                <h2>Add New Contact</h2>
+                <div class="name">
+                    <i class="far fa-user" aria-hidden="true"></i>
+                    <input type="text" required id="fullName" placeholder="Enter name" />
+                </div>
+                <div class="email">
+                    <i class="fas fa-at" aria-hidden="true"></i>
+                    <input type="email" required id="myEmail" placeholder="Enter email" />
+                </div>
+                <div class="number">
+                    <i class="fas fa-phone" aria-hidden="true"></i>
+                    <input type="tel" required id="myTel" placeholder="Enter number" />
+                </div>
+                <div class="img">
+                    <i class="far fa-image" aria-hidden="true"></i>
+                    <input type="url" required id="imgurl" placeholder="Enter image URL" />
+                </div>
+                <button type="submit" class="submitbtn">Add Contact</button>
+            </form>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+    <script src="https://kit.fontawesome.com/dd8c49730d.js" crossorigin="anonymous"></script>
+</body>
+</html>

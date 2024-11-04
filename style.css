@@ -1,0 +1,83 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --bg-color: #eef0f4;
+    --color: #333;
+    --primary-color: #4CAF50;
+    --input-border-color: #ddd;
+    --input-text-color: #333;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background: var(--bg-color);
+    color: var(--color);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 5vh auto;
+    padding: 0 20px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.ListContainer {
+    width: 100%;
+    max-width: 500px;
+    margin: 10px;
+    padding: 20px;
+    border-radius: 8px;
+    background: var(--bg-color);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.js-form {
+    width: 100%;
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 8px;
+    background: var(--bg-color);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="url"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid var(--input-border-color);
+    border-radius: 4px;
+    outline: none;
+    color: var(--input-text-color);
+}
+
+.submitbtn {
+    display: inline-block;
+    padding: 10px 20px;
+    background: var(--primary-color);
+    border: none;
+    color: #fff;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.submitbtn:hover {
+    background: #45a049;
+}
