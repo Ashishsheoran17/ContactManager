@@ -19,10 +19,9 @@ function renderContact(contact) {
     node.setAttribute("class", "person");
     node.setAttribute("data-key", contact.id);
     node.innerHTML = `
-      <img src="${contact.imageurl}" alt="${contact.name}'s Image">
       <div class="contactdetail">
         <h4>${contact.name}</h4>
-        <p>Email: ${contact.email}</p>
+        <p>${contact.email ? `Email: ${contact.email}` : ""}</p>
         <p>Phone: ${contact.contactnumber}</p>
       </div>
       <button class="delete-contact js-delete-contact">Delete</button>
@@ -54,11 +53,10 @@ function renderAllContacts() {
 }
 
 // Add a new contact
-function addContact(name, email, imageurl, contactnumber) {
+function addContact(name, email, contactnumber) {
   const contactObject = {
     name,
-    email,
-    imageurl,
+    email: email || "",  // If email is empty, set as an empty string
     contactnumber,
     id: Date.now()
   };
@@ -71,10 +69,9 @@ document.querySelector(".js-form").addEventListener("submit", (event) => {
   event.preventDefault();
   const name = document.getElementById("fullName").value;
   const email = document.getElementById("myEmail").value;
-  const imageurl = document.getElementById("imgurl").value;
   const contactnumber = document.getElementById("myTel").value;
 
-  addContact(name, email, imageurl, contactnumber);
+  addContact(name, email, contactnumber);
   document.querySelector(".js-form").reset();
 });
 
